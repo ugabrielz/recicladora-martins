@@ -14,3 +14,17 @@ addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(updateParallax
 const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.menu a[href^="#"]')];
 const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));document.querySelector(`.menu a[href="#${e.target.id}"]`)?.classList.add('active')}}),{rootMargin:'-35% 0px -55% 0px'});
 sections.forEach(s=>navObs.observe(s));
+window.addEventListener("load", () => {
+  const loader = document.getElementById("pageLoader");
+
+  if (!loader) return;
+
+  setTimeout(() => {
+    loader.classList.add("hide");
+
+    setTimeout(() => {
+      loader.remove();
+    }, 600);
+
+  }, 1000);
+});
