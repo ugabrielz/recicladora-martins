@@ -19,3 +19,71 @@ footer{background:#00662f;color:#fff;position:relative;overflow:hidden}.wave{pos
 @media(max-width:1000px){.container{width:min(calc(100% - 45px),var(--container))}.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;padding-top:45px}.hero-copy{padding-bottom:10px}.hero h1{font-size:58px}.hero-visual{height:530px;justify-content:center}.hero-ring{right:auto;width:500px;height:500px}.hero-photo{width:455px;height:455px}.chip-1{left:2%}.chip-2{right:2%}.cards{gap:20px}.card-body{padding:25px 18px}.about-grid{gap:45px}}
 @media(max-width:760px){.container{width:calc(100% - 34px)}.header{height:76px}.brand img{width:62px;height:62px}.header.scrolled{height:66px}.header.scrolled .brand img{width:54px;height:54px}.menu-toggle{display:block}.menu{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:24px 28px;box-shadow:0 18px 35px rgba(0,0,0,.1);flex-direction:column;align-items:flex-start;gap:10px}.menu.open{display:flex}.hero{padding-top:76px}.hero-shape{right:-70%;width:170%;top:40%;height:72%}.hero h1{font-size:48px;letter-spacing:-2.5px}.hero-copy>p{font-size:13px}.btn{width:100%}.hero-visual{height:430px}.hero-ring{width:390px;height:390px;border-width:7px}.hero-photo{width:350px;height:350px}.chip-1{left:0;top:55px;font-size:9px}.chip-2{right:0;bottom:32px}.scroll-indicator{display:none}.diff-grid{grid-template-columns:1fr 1fr;gap:28px 0}.diff{padding:0 9px}.diff:not(:last-child):after{display:none}.icon{width:58px;height:58px}.diff h3{font-size:1.45rem}.diff p{font-size:9px}.section{padding:70px 0}.heading h2{font-size:2.5rem}.cards{grid-template-columns:1fr;max-width:480px;margin:auto}.card h3{font-size:1.6rem}.card-image{height:250px}.cta h2{font-size:2.3rem}.cta-grid{grid-template-columns:1fr;padding:32px 0;gap:26px}.cta-main{border-right:0;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:25px}.cta-contact{padding-left:0}.about-grid{grid-template-columns:1fr}.about-copy h2{font-size:2.2rem}.location h3{font-size:1.3rem}.map{height:250px}.footer-grid{grid-template-columns:1fr;gap:25px}.footer-contact{border-left:0;border-top:1px solid rgba(255,255,255,.3);padding:22px 0 0}.footer-contact h3{font-size:1.3rem}.map{height:250px}.footer-grid{grid-template-columns:1fr;gap:25px}.footer-contact{border-left:0;border-top:1px solid rgba(255,255,255,.3);padding:22px 0 0}}
 @media(max-width:420px){.hero h1{font-size:42px}.hero-visual{height:370px}.hero-ring{width:340px;height:340px}.hero-photo{width:305px;height:305px}.hero-chip{transform:scale(.9)}.heading h2{font-size:2.1rem}.diff h3{font-size:1.2rem}.card h3{font-size:1.4rem}.cta h2{font-size:2rem}.about-copy h2{font-size:2rem}.about-copy p{font-size:14px;line-height:1.8}.location h3{font-size:1.1rem}.footer-contact h3{font-size:1.1rem}}
+/* =========================================
+   LOADER INICIAL - RECICLADORA MARTINS
+   ========================================= */
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--green);
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity .55s ease,
+    visibility .55s ease;
+}
+
+.loader-symbol {
+  color: #fff;
+  font-size: 92px;
+  line-height: 1;
+
+  animation: recycle-loader 1s cubic-bezier(.4, 0, .2, 1) forwards;
+
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, .15));
+}
+
+.page-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes recycle-loader {
+
+  0% {
+    transform: scale(.65) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1.08) rotate(45deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: scale(1) rotate(270deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Ajuste para celular */
+@media (max-width: 760px) {
+  .loader-symbol {
+    font-size: 72px;
+  }
+}
