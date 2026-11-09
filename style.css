@@ -87,3 +87,30 @@ footer{background:#00662f;color:#fff;position:relative;overflow:hidden}.wave{pos
     font-size: 72px;
   }
 }
+
+
+/* Agendamento de coleta gratuita */
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+.menu .nav-collect{color:#087e40;font-weight:800}
+.collect-section{position:relative;overflow:hidden;padding:100px 0;background:radial-gradient(circle at 12% 15%,#235b42 0%,transparent 38%),linear-gradient(125deg,#0a3023,#0b4830 70%,#12563a);color:#fff}
+.collect-section:before{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(178,232,190,.12);border-radius:50%;left:-260px;bottom:-240px;pointer-events:none}
+.collect-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(32px,6vw,90px);position:relative;z-index:1}
+.collect-kicker{display:inline-flex;align-items:center;gap:10px;background:#d5f5d8;color:#10522c;border-radius:100px;padding:10px 16px;font-weight:800;font-size:12px;letter-spacing:.7px}
+.collect-info h2{font-family:Poppins,sans-serif!important;font-size:clamp(2.5rem,4.4vw,4.3rem)!important;line-height:1.12!important;letter-spacing:-1.5px;margin:25px 0 20px;color:#fff}
+.collect-info h2 span{color:#a8ecae}
+.collect-lead{font-size:clamp(16px,1.4vw,19px);line-height:1.8;color:#e4f3e9;max-width:590px}
+.collect-items{display:grid;grid-template-columns:1fr 1fr;gap:17px 12px;margin:30px 0}
+.collect-items span{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:#f1fff5}
+.collect-items i{display:grid;place-items:center;flex-shrink:0;width:25px;height:25px;border-radius:50%;background:#a9edb5;color:#105333;font-size:11px}
+.collect-note{display:flex;align-items:flex-start;gap:14px;padding:20px;border:1px solid #54866a;border-radius:14px;background:#ffffff0c}
+.collect-note>i{color:#b7f1c2;font-size:24px}.collect-note strong,.collect-note small{display:block}.collect-note strong{font-size:15px}.collect-note small{font-size:13px;color:#d6e9db;margin-top:6px;line-height:1.6}
+.collect-form-wrap{background:#fff;color:#163727;border-radius:20px;padding:clamp(22px,3vw,38px);box-shadow:0 25px 70px #001b0d55}
+.collect-form-head{display:flex;gap:14px;align-items:center;margin-bottom:24px}.collect-form-head>span{display:grid;place-items:center;width:52px;height:52px;border-radius:13px;background:#e4f6e8;color:#11814a;font-size:23px;flex-shrink:0}.collect-form-head strong{font-size:21px;font-family:Poppins,sans-serif}.collect-form-head p{font-size:12px;line-height:1.5;color:#66796e;margin-top:4px}
+.collect-form{display:flex;flex-direction:column;gap:10px}.collect-form>label,.collect-fieldset legend{font-size:13px;font-weight:800;color:#213a2c}.collect-form label span:not(.collect-options span),.collect-fieldset legend span{color:#c04a31}
+.collect-form>input,.collect-form #collectOther{width:100%;min-height:49px;border:1px solid #d5e2d8;border-radius:9px;padding:12px 14px;font:inherit;font-size:14px;color:#183d2a;background:#f9fcfa;outline:none}.collect-form>input:focus,.collect-form #collectOther:focus{border-color:#178f51;box-shadow:0 0 0 3px #178f5120}
+.collect-fieldset{border:0;padding:0;margin:10px 0 4px;min-width:0}.collect-fieldset legend{margin-bottom:12px}.collect-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}.collect-options label{display:flex;align-items:center;gap:9px;cursor:pointer;border:1px solid #dce9df;border-radius:9px;padding:12px 10px;font-size:12px;font-weight:700;color:#294734;background:#f8fbf8}.collect-options label:has(input:checked){border-color:#168c4d;background:#e7f7ea}.collect-options input{accent-color:#138549;width:17px;height:17px;flex-shrink:0}.collect-form #collectOther:not([hidden]){display:block;margin-top:12px}.collect-form #collectOther[hidden],.collect-error[hidden]{display:none}.collect-error{font-size:12px;color:#bd302e;margin:8px 0 0}
+.collect-submit{display:flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:10px;min-height:56px;background:#169e50;color:#fff;font:inherit;font-size:15px;font-weight:800;cursor:pointer;transition:background .2s,transform .2s;margin-top:10px}.collect-submit:hover{background:#0b7e3c;transform:translateY(-2px)}.collect-submit:focus-visible{outline:3px solid #1a9b52;outline-offset:3px}
+.collect-disclaimer{display:flex;align-items:flex-start;justify-content:center;gap:8px;color:#6a796e;font-size:11px;line-height:1.6;text-align:center;margin:5px 0 0}
+@media(max-width:900px){.collect-grid{grid-template-columns:1fr;max-width:670px}.collect-section{padding:75px 0}.collect-info h2{max-width:600px}}
+@media(max-width:480px){.collect-section{padding:58px 0}.collect-items{gap:13px 8px}.collect-items span{font-size:12px}.collect-form-wrap{padding:22px 17px}.collect-form-head strong{font-size:18px}.collect-options{gap:8px}.collect-options label{padding:10px 7px;font-size:11px}.collect-submit{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.collect-submit{transition:none}}

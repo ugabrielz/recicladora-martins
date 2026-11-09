@@ -28,3 +28,31 @@ window.addEventListener("load", () => {
 
   }, 1000);
 });
+
+
+// Solicitação de coleta gratuita via WhatsApp (sem armazenamento de dados).
+const collectForm=document.getElementById('collectForm');
+if(collectForm){
+  const otherCheckbox=collectForm.querySelector('input[value="Outros"]');
+  const otherField=document.getElementById('collectOther');
+  const error=document.getElementById('collectError');
+  otherCheckbox.addEventListener('change',()=>{
+    otherField.hidden=!otherCheckbox.checked;
+    otherField.required=otherCheckbox.checked;
+    if(!otherCheckbox.checked)otherField.value='';
+  });
+  collectForm.querySelectorAll('input[name="item"]').forEach(box=>box.addEventListener('change',()=>{error.hidden=true}));
+  collectForm.addEventListener('submit',event=>{
+    event.preventDefault();
+    if(!collectForm.reportValidity())return;
+    const selected=[...collectForm.querySelectorAll('input[name="item"]:checked')];
+    if(!selected.length){error.hidden=false;collectForm.querySelector('input[name="item"]').focus();return}
+    const items=selected.map(box=>box.value==='Outros'?`Outros: ${otherField.value.trim()}`:box.value);
+    const name=document.getElementById('collectName').value.trim();
+    const address=document.getElementById('collectAddress').value.trim();
+    if(!name||!address)return;
+    const message=`Olá! Gostaria de agendar uma coleta gratuita com a Recicladora Martins.\n\nNome: ${name}\nEndereço: ${address}\nItens para retirada: ${items.join(', ')}\n\nAguardo retorno para combinar a data e o horário da coleta.`;
+    const url=`https://wa.me/5517996443848?text=${encodeURIComponent(message)}`;
+    window.open(url,'_blank','noopener,noreferrer');
+  });
+}

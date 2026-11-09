@@ -25,6 +25,7 @@
       <a class="active" href="#inicio">Início</a>
       <a href="#quem-somos">Quem Somos</a>
       <a href="#servicos">Serviços</a>
+      <a href="#agendar-coleta" class="nav-collect">Coleta grátis</a>
       <a href="#diferenciais">Diferenciais</a>
       <a href="#contato">Contato</a>
       <a class="nav-wa" href="https://wa.me/5517996443848" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -72,23 +73,62 @@
       <div class="eyebrow">Nossos Serviços</div>
       <h2>Soluções completas<br><span>para um futuro melhor.</span></h2>
       <i></i>
-    <div class="card-image">
-    <img src="https://images.pexels.com/photos/1010485/pexels-photo-1010485.jpeg?auto=compress&cs=tinysrgb&w=1400"
-         alt="Placas eletrônicas"
-         loading="lazy">
-    <span>01</span>
-</div>
-    
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-image"><img src="https://images.pexels.com/photos/1010485/pexels-photo-1010485.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Placas eletrônicas" loading="lazy"><span>01</span></div>
         <div class="card-body"><div class="round">▣</div><h3>Resíduos Eletrônicos</h3><p>Coleta e destinação adequada de equipamentos eletrônicos inservíveis, como computadores, monitores, impressoras e celulares.</p><em></em></div>
       </article>
       <article class="card reveal delay-1">
-        <div class="card-image"><img src="https://images.pexels.com/photos/17158638/pexels-photo-17158638.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Eletrodomésticos" loading="lazy"><span>02</span></div>
+        <div class="card-image"><img src="https://images.pexels.com/photos/17158638/pexels-photo-17158638.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Eletrodomésticos" loading="lazy"><span>02</span></div>
         <div class="card-body"><div class="round">▣</div><h3>Eletrodomésticos</h3><p>Recebemos e destinamos eletrodomésticos fora de uso com responsabilidade e respeito ao meio ambiente.</p><em></em></div>
       </article>
       <article class="card reveal delay-2">
-        <div class="card-image"><img src="https://images.pexels.com/photos/9783999/pexels-photo-9783999.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Sucatas metálicas" loading="lazy"><span>03</span></div>
+        <div class="card-image"><img src="https://images.pexels.com/photos/9783999/pexels-photo-9783999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Sucatas metálicas" loading="lazy"><span>03</span></div>
         <div class="card-body"><div class="round">kg</div><h3>Sucatas em Geral</h3><p>Recebemos e destinamos sucatas metálicas e outros materiais recicláveis, contribuindo para a redução de impactos ambientais.</p><em></em></div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="collect-section" id="agendar-coleta" aria-labelledby="collect-title">
+  <div class="container collect-grid">
+    <div class="collect-info reveal">
+      <span class="collect-kicker"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> RETIRADA 100% GRATUITA</span>
+      <h2 id="collect-title">Agende sua <span>coleta gratuita!</span></h2>
+      <p class="collect-lead">Tem eletrodomésticos ou eletrônicos sem uso? A Recicladora Martins retira esses itens no seu endereço, sem custo para você.</p>
+      <div class="collect-items" aria-label="Exemplos de itens que retiramos">
+        <span><i class="fa-solid fa-check"></i> Geladeiras</span>
+        <span><i class="fa-solid fa-check"></i> Máquinas de lavar</span>
+        <span><i class="fa-solid fa-check"></i> Micro-ondas</span>
+        <span><i class="fa-solid fa-check"></i> Televisores</span>
+        <span><i class="fa-solid fa-check"></i> Computadores</span>
+        <span><i class="fa-solid fa-check"></i> Outros eletrônicos</span>
+      </div>
+      <div class="collect-note"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><div><strong>Simples, gratuito e responsável.</strong><small>Informe os itens e combine a data e o horário pelo WhatsApp.</small></div></div>
+    </div>
+    <div class="collect-form-wrap reveal delay-1">
+      <div class="collect-form-head"><span><i class="fa-solid fa-calendar-check"></i></span><div><strong>Solicite sua retirada</strong><p>Preencha os dados para conversar com nossa equipe.</p></div></div>
+      <form id="collectForm" class="collect-form">
+        <label for="collectName">Seu nome <span>*</span></label>
+        <input id="collectName" name="nome" type="text" autocomplete="name" placeholder="Digite seu nome" maxlength="100" required>
+        <label for="collectAddress">Endereço da coleta <span>*</span></label>
+        <input id="collectAddress" name="endereco" type="text" autocomplete="street-address" placeholder="Rua, número, bairro e cidade" maxlength="240" required>
+        <fieldset class="collect-fieldset"><legend>O que deseja descartar? <span>*</span></legend>
+          <div class="collect-options">
+            <label><input type="checkbox" name="item" value="Geladeira"><span>Geladeira</span></label>
+            <label><input type="checkbox" name="item" value="Máquina de lavar"><span>Máquina de lavar</span></label>
+            <label><input type="checkbox" name="item" value="Micro-ondas"><span>Micro-ondas</span></label>
+            <label><input type="checkbox" name="item" value="Televisão"><span>Televisão</span></label>
+            <label><input type="checkbox" name="item" value="Computador / eletrônico"><span>Computador / eletrônico</span></label>
+            <label><input type="checkbox" name="item" value="Outros"><span>Outros</span></label>
+          </div>
+          <input id="collectOther" name="outros" type="text" placeholder="Quais outros itens?" maxlength="240" hidden>
+          <p id="collectError" class="collect-error" role="alert" hidden>Selecione pelo menos um item.</p>
+        </fieldset>
+        <button type="submit" class="collect-submit"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Agendar coleta grátis <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <p class="collect-disclaimer"><i class="fa-solid fa-lock" aria-hidden="true"></i> A solicitação será enviada pelo WhatsApp. O agendamento será confirmado pela equipe.</p>
+      </form>
     </div>
   </div>
 </section>
